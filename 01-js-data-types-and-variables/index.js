@@ -1,6 +1,7 @@
 // ------------ Debugging and Testing tools: ------------
 
 // Using console.log()
+// console.log(1+1)
 // `node` in terminal to enter a repl
 // Debugger
 
@@ -8,13 +9,40 @@
 
 // Number
 
-// String
+// integer
+12;
+// floats
+3.14;
+NaN;
 
-// Undefined
+// typeof
 
-// Null
+// console.log(typeof NaN)
+
+// // String
+
+// let cat = "timmy"
+
+// "string"
+// 'This is a stringy string'
+// console.log('my cats name is ${cat}') // interpolation: embed a variable within a string
+
+// Undefined: empty value, unassigned variable, when functions value is undefined(function has no return value)
+
+// Null: absense of value
+
+let song = "Wednesday song";
+
+// console.log(song)
 
 // Boolean
+
+// true
+// false
+
+let favorite = false;
+
+// console.log(typeof favorite)
 
 // examples of falsey values
 // 0
@@ -27,32 +55,91 @@
 // everything else is truthy
 
 // logical operators
+
+let x = 1 != "1"; // comparing a string to number
+
+// console.log(x)
 // == vs ===
+
+// !==
 
 // BigInt: a numeric primitive in JavaScript that can represent integers with arbitrary precision
 
-// Symbol
+// let num = 9872381973289173198n
 
-// Object
+// // console.log(typeof num)
+
+// // Symbol: unique identifier
+
+// // Object
+
+// let obj = {name: "molly"}
 
 // What does it mean to be a primitive type?
+// represents a single value
+
+// let human = {
+//     name: "molly",
+//     age: 21,
+// }
+
+// let cat = "timmy isayo"
+
+// let arr = cat.split(", ")
+
+// console.log(cat)
+// console.log(arr)
+
+// console.log(cat === arr)
 
 // What is the difference between null and undefined?
 
-// What is a variable
+// What is a variable? a box that stores data
 
 // What is the relationship between data types and variables
 
 // How can a variable be declared
 
+// const, let
+
 // What is the difference between let and const
 
+// const can not be redeclared or reassigned
+// let can be reassigned but not redeclared
+// let can be initialized without assignment i.e let song;
+
+// let should be used for counters
+
+// const someFunction = () => {
+//     //logic for our function
+//     let cat = "timmy"
+
+// }
+
+// console.log(cat)
+
+// scope: accessibility of the variable and its value
+
+// global: work for the whole file, access it anywhere within that file, program
+// local: within a function, can not be referenced outside of the function
+// block scope:
+
+// if (true){
+//     let phase = "javascript"
+// }
+
+// console.log(phase)
+
+// const should be a go to
+
 // ------------ Conditional statements ------------
+
+// control flow: control the behavior of our program based on a condtion met
 
 // if...else
 
 // let pokemon = "Voltorb";
-// let likes = 3;
+// let likes = 0;
 
 // if (likes === 1) {
 //   console.log(`${pokemon} has 1 like`);
@@ -62,8 +149,8 @@
 
 // if...else if...else
 
-// let pokemon = "Voltorb";
-// let likes = 1;
+let pokemon = "Voltorb";
+let likes = 3;
 
 // if (likes === 0) {
 //   console.log("render: 0 likes");
@@ -77,11 +164,29 @@
 
 // condition ? truthy response : falsey response
 
-// let favorite = true 
+// let fave = false
 
-// let response = favorite ? "❤️" : "♡"
+// let response = fave ? "❤️" : "♡"
 
 // console.log(response)
+
+// hoisted => var
+
+function someFunction() {
+  let localVar = "local variable";
+  console.log("hoisted:", blockVar);
+
+  if (true) {
+    // var blockVar;
+    console.log(blockVar);
+    var blockVar = "block variable";
+    console.log("inside block:", blockVar);
+  }
+
+  console.log("outside of block", blockVar);
+}
+
+someFunction();
 
 // ------------------------------------------------ //
 // console.log("------------------------");
