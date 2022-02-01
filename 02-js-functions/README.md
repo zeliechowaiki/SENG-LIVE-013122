@@ -22,5 +22,4 @@
 
 ### Resources
 
-- [HTTP Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 - [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
