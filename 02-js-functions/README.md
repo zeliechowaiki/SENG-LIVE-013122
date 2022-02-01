@@ -2,6 +2,7 @@
 
 ### Lecture Outline
 
+- What is a function, what is its importance?
 - Declaring vs invoking functions
 - Function Declarations vs Function Expressions vs Arrow Functions
 - Function nuances 

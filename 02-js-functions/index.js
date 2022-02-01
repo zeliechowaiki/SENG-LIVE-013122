@@ -55,11 +55,11 @@
 
 // -------------------------------------------
 
-console.log("------------------------");
-console.log("⬇️ Break Out Activities ⬇️");
-console.log("🚨 Comment Out Lecture Code Above Before Starting 🚨");
-console.log("💡 Use console.log() To Check Answers 💡");
-console.log("------------------------");
+// console.log("------------------------");
+// console.log("⬇️ Break Out Activities ⬇️");
+// console.log("🚨 Comment Out Lecture Code Above Before Starting 🚨");
+// console.log("💡 Use console.log() To Check Answers 💡");
+// console.log("------------------------");
 
 // 🚧 Break Out Activity 1: Defining, Declaring, and Invoking Functions 
 
@@ -100,3 +100,6 @@ console.log("------------------------");
         // 💡 All characters in any sentence should remain in lower case.
 
         // Example: reverseWords("sally sells seashells by the sea shore", "s") ➞ "yllas slles sllehsaes by the aes erohs"
+
+
+
