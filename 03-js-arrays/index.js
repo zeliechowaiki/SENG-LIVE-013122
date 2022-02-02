@@ -1,3 +1,12 @@
+// let likeBttn = document.querySelector("#likes-bttn")
+// let likes = 0
+
+// let increaseLikes = () => {
+//     console.log(++likes)
+// }
+
+// likeBttn.addEventListener("click", increaseLikes)
+
 // Understanding arrays
 
 // What are arrays and how do they allow us to structure our data?
