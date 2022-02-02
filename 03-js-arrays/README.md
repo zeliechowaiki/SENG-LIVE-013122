@@ -18,7 +18,7 @@
 
 ### Warm Up
 
-&emsp; 💡 Callbacks and arrow functions
+💡 Callbacks and arrow functions
 
 Define the following functions using arrow function syntax:
 
