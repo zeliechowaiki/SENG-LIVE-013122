@@ -154,11 +154,3 @@ function printAbilities(obj){
 console.log(printAbilities(pikachu))
 
 // BONUS: Modify printAbilities so that it returns the string as: 'Abilities: static, lightning-rod'
-
-
-// let arr1 = ["cat", "dog"]
-
-// let arr2 = ["fish", "hamster"]
-
-// let combinedArr = arr1.concat(arr2)
-// console.log([...arr1, ...arr2])
