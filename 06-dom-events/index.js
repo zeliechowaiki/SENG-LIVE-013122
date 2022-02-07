@@ -33,6 +33,8 @@ const pokemon = [
 
 const pokeContainer = document.querySelector("#poke-container");
 
+let likes = 0;
+
 pokemon.forEach(function (char) {
   renderPokemon(char);
 });
@@ -51,4 +53,26 @@ function renderPokemon(pokemon) {
 
   pokeCard.append(pokeImg, pokeName);
   pokeContainer.appendChild(pokeCard);
+  
+  const pokeLikes = document.createElement('h3');
+  pokeLikes.textContent = 'Likes: 0';
+  pokeCard.appendChild(pokeLikes);
+
+  const likeBtn = document.createElement('button');
+  likeBtn.textContent = "♥";
+  pokeCard.appendChild(likeBtn);
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = 'delete';
+  pokeCard.appendChild(deleteBtn);
+  //likeBtn.addEventListener('click', handleLikes);
 }
+
+/*
+function handleLikes (e) {
+  e.preventDefault();
+  likeCounter = document.querySelector('#likeCounter')
+  likes = likes + 1;
+  likeCounter.textContent = `Likes: ${likes}`;
+}
+*/
