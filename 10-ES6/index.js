@@ -2,11 +2,11 @@
 
 // ES6 => ECMAScript 2015
 
-  // latest version of the ECMAScript standard, introduced new features syntax that
+// latest version of the ECMAScript standard, introduced new features syntax that
 
-  // we have been using already (i.e., arrows, const, let, etc.)
+// we have been using already (i.e., arrows, const, let, etc.)
 
-  // syntactic sugar => easier to write, read and scale
+// syntactic sugar => easier to write, read and scale
 
 // Declaring Arrow Functions vs. Regular Functions
 
