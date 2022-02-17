@@ -10,9 +10,12 @@
 
 // constant operation (simplest runtime)
 
+// how many tasks are being achieved 
+// how many times are those tasks being executed 
+
 let myArray = [1, 2, 3, 4, 5];
 
-const arrayLength = myArray.length;
+const arrayLength = myArray.length; // 1 task 
 
 // console.log(arrayLength);
 
@@ -24,11 +27,14 @@ const arrayLength = myArray.length;
 let shorterArray = [1, 2, 3, 4, 5];
 let longerArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+/// calculation on the number of inputs 
 function iterateItems(arr) {
   arr.forEach((num) => {
     console.log(num);
   });
 }
+
+// O(n)
 
 // iterateItems(shorterArray);
 // iterateItems(longerArray);
@@ -47,7 +53,7 @@ function findIndex(itemsArray, matchCase) {
 
 const lettersArray = ["a", "b", "c", "d"];
 
-// findIndex(lettersArray, 'a');
+findIndex(lettersArray, 'a');
 // 0  (best case, one iteration)
 
 // ✅ Big O Notation
@@ -59,7 +65,7 @@ const lettersArray = ["a", "b", "c", "d"];
 
 // help us to select the most efficient solution
 
-// findIndex(lettersArray, 'd');
+findIndex(lettersArray, 'd');
 
 // 3  (worst case, 4 iterations)
 
@@ -70,18 +76,20 @@ const lettersArray = ["a", "b", "c", "d"];
 // Constant Time Complexity: Big O(1)
 
 function multipleByTwo(num) {
-  return 2 * num;
+  return 2 * num; // 1 simple task 
 }
 
 // console.log(multipleByTwo(10)); // 20 iterations
 // console.log(multipleByTwo(3000)); // 6000 iterations
+
+// objects => o(1)
 
 // Linear Time Complexity: Big O(N)
 
 function reverseArr(originalArray) {
   let newArray = [];
   for (let i = originalArray.length - 1; i >= 0; i--) {
-    newArray.push(originalArray[i]);
+    newArray.push(originalArray[i]); // run this task based on how many inputs are in the array that is being over looped 
   }
 
   return newArray;
@@ -97,17 +105,43 @@ function multAllElements(arr1, arr2) {
 
   let sumOfProducts = 0;
 
-  for (let el of arr1) {
-    for (let subEl of arr2) {
+  for (let el of arr1) { // run a number of times depending on how many elements we have in array 
+    for (let subEl of arr2) { 
       sumOfProducts += el * subEl;
     }
   }
   return sumOfProducts;
 }
 
-// console.log(multAllElements([1, 2], [9, 10])); // yields 57
-// console.log(multAllElements([1, 2, 3, 4], [5, 6, 7, 8])); // yields 260
+console.log(multAllElements([1, 2], [9, 10])); // yields 57
+console.log(multAllElements([1, 2, 3, 4], [5, 6, 7, 8])); // yields 260
 
+
+// Logarithmic time complexity: binary searches 
+// one of the better time complexities 
+// sorted input of data 
+// O(log n)
+
+let sortedNum = [0,1,2,3,4,5,6] // 7 iterations 
+let newSortedNum = [3,4,5,6] //1 
+let newNewSortedNum = [5,6] // 2 
+let anotherSortedNum = [6] // our match // 3
+// start at 3, compare to matchcase 
+
+
+function findNum(arr, matchCase){ // O(n)
+  for (let i = 0; i <= arr.length; i++){
+    if (arr[i] === matchCase){
+      console.log(arr[i])
+    }
+  }
+}
+
+
+// big O: run time complexity 
+// determine the time complexity of an algorithm 
+// 1. count the number of steps the computer will take to run the code 
+// 2. Remove of any constants 
 // -------------------------------------------
 
 console.log("------------------------");
@@ -134,12 +168,12 @@ function findIndexOfFirstNumber(num, arr) {
   return -1;
 }
 
-// ✅ Write your answer / explanation here.
+// ✅ O(n) => looping through array, dependent on the number of elements in the array. Will run the for loop for each element 
 
 // 2️⃣ Determine the Big O runtime of findIndexOfEachNumber() below.
 
 function findIndexOfEachNumber(num, arr) {
-  let arrayOfIndices = [];
+  let arrayOfIndices = []; // 1 
   arr.forEach((el, i) => {
     if (el === num) {
       arrayOfIndices.push(i);
@@ -149,7 +183,7 @@ function findIndexOfEachNumber(num, arr) {
   return arrayOfIndices;
 }
 
-// ✅ Write your answer / explanation here.
+// ✅ Linear time complexity: O(n)
 
 // 🚧 Break Out Activity 2: Calculating Big O Runtimes
 
@@ -158,16 +192,16 @@ function findIndexOfEachNumber(num, arr) {
 const array = [36, 14, 1, 7, 21];
 
 function findHigherOrLower(arr) {
-  if (arr[arr.length - 1] > arr[0]) {
+  if (arr[arr.length - 1] > arr[0]) { // 1 task 
     return "Higher";
-  } else if (arr[arr.length - 1] < arr[0]) {
+  } else if (arr[arr.length - 1] < arr[0]) { // 1 task 
     return "Lower";
   } else {
     return "Neither";
   }
 }
 
-// ✅ Write your answer / explanation here.
+// ✅ constant O(1)
 
 // 2️⃣ Determine the Big O runtime of findSumOfSequentialArray() below.
 
@@ -182,7 +216,7 @@ function findSumOfSequentialArray(arr) {
   return sumOfNums;
 }
 
-// ✅ Write your answer / explanation here.
+// ✅ O(n)
 
 // 🚧 Break Out Activity 3: Calculating Big O Runtimes
 
@@ -220,4 +254,4 @@ function findSumOfSequentialArray(arr) {
   return (arr.length * (arr.length + 1)) / 2;
 }
 
-// ✅ Write your answer / explanation here.
+// ✅ O(1)
